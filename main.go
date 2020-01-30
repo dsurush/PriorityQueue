@@ -78,7 +78,7 @@ func (receiver *list) dequeue() interface{} {
 	return current.value
 }
 
-func (receiver *list) PriorityQueue() {
+func (receiver *list) PrioritizeQueue() {
 	currentI := receiver.firstElement
 	for ;currentI != nil; {
 		currentJ := receiver.firstElement
