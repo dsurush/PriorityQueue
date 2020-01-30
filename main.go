@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type list struct {
 	firstElement *listNode
 	lastElement  *listNode
@@ -86,7 +84,6 @@ func (receiver *list) PriorityQueue() {
 		currentJ := receiver.firstElement
 		for ;currentJ.next != nil;{
 			if currentJ.priority > currentJ.next.priority {
-				fmt.Println(currentJ.priority, " > ", currentJ.next.priority)
 				currentJ.priority, currentJ.next.priority = currentJ.next.priority, currentJ.priority
 				currentJ.value, currentJ.next.value = currentJ.next.value, currentJ.value
 			}
